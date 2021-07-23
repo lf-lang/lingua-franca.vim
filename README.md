@@ -17,3 +17,10 @@ Alternatively, you can install the plugin manually by copying the three director
 - `~/.config/nvim/` if you're using Neovim
 - Or really anywhere in your Vim 'runtimepath'
 
+## Caveats
+
+- There are some bugs with the nested syntax highlighting where some lines aren't highlighted; they likely originate in Vim's syntax highlight engine and I don't think changes at the plugin level can fix them.
+- The target language of your file is determined when the filetype is set. So, if you decide to change the target while editing the file, you need to either:
+  - do `:set ft=linguafranca`
+  - delete and reopen the buffer
+  - close and reopen `(n)vim`
