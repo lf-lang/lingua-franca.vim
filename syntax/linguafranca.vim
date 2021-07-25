@@ -33,7 +33,7 @@ syntax case match
 
 " Keywords
 syntax keyword lfKeywords target import main realtime reactor state time mutable input output timer
-      \ action reaction startup shutdown after deadline mutation preamble new federated at as from
+      \ action reaction startup shutdown after deadline mutation preamble new federated at as from method
 syntax keyword lfActionOrigins logical physical
 syntax keyword lfTimeUnits nsec nsecs usec usecs msec msecs sec secs second seconds
       \ min mins minute minutes hour hours day days week weeks
