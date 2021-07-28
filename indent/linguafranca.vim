@@ -74,6 +74,7 @@ function! GetLFIndent()
 
   " If the line which is 2 lines above the one we're indenting opens a target
   " block, we use the target langage indentation
+  " TODO : we should use prevnonblank instead of simply v:lnum - 2
   if v:lnum >= 3 && getline(v:lnum - 2) =~ '{=\s*$'
     " TODO add a check to make sure that the {= that we're working with hasn't
     " been closed yet
