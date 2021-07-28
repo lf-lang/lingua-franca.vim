@@ -1,7 +1,7 @@
 # Lingua Franca Plugin for Vim
 
 This Vim plugin provides basic support for Lingua Franca files.
-It brings basic syntax highlighting and rudimentary text-object support for the target code blocks.
+It brings basic syntax highlighting, basic indentation rules and rudimentary text-object support for the target code blocks.
 
 ## Installation
 
@@ -24,3 +24,7 @@ Alternatively, you can install the plugin manually by copying the three director
   - do `:set ft=linguafranca`
   - delete and reopen the buffer
   - close and reopen `(n)vim`
+
+## Indentation
+Due to the nature of Vim's indentation rules (the fact that they are regex based), those rules are pretty much all “ad-hoc”.
+I think what it is there now is better than nothing, but if you find an example of a situation where the automatic indenting isn't satisfying, please open an issue.
