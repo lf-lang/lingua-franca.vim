@@ -11,11 +11,18 @@ If you're using [vim-plug](https://github.com/junegunn/vim-plug), simply add the
 Plug 'lf-lang/lingua-franca.vim'
 ```
 
-Alternatively, you can install the plugin manually by copying the three directories (ftplugin, ftdetect, syntax) and their contents into:
+### Manual installation
+You can install this plugin without a plugin manager simply by doing:
 
-- `~/.vim/` if you're using Vim
-- `~/.config/nvim/` if you're using Neovim
-- Or really anywhere in your Vim 'runtimepath'
+- If you're using Vim
+    ```
+    git clone https://github.com/lf-lang/lingua-franca.vim ~/.vim/pack/plugins/start/lingua-franca.vim
+    ```
+- If you're using Neovim
+    ```
+    git clone https://github.com/lf-lang/lingua-franca.vim ~/.config/nvim/pack/plugins/start/lingua-franca.vim
+    ```
+You can then update the plugin simply by `git pull`ing it.
 
 ## Caveats
 
