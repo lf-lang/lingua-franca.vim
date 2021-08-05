@@ -1,15 +1,20 @@
 " ftplugin/linguafranca.vim
 " Arbitrary linguafranca related vim code
 
+if exists("b:did_ftplugin")
+  finish
+endif
+
+" Don't load another plugin for this buffer
+let b:did_ftplugin = 1
+
 setlocal commentstring=//%s
 setlocal formatoptions=jcroq
 " 'comments' configuration stolen from the C file, let's see how it works
 setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
 
-" function! CursorInTargetBlock()
-"   " TODO
-"   " See: :help searchpair(), searchpairpos(), `n` flag
-" endfunction
+" Automatically indent when we close a target block in a new line
+setlocal indentkeys+=0==}
 
 " function! LFTargetTextObject()
 "   " TODO
