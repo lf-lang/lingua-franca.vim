@@ -20,12 +20,15 @@ syntax keyword lfActionOrigins logical physical
 syntax keyword lfTimeUnits nsec nsecs usec usecs msec msecs sec secs second seconds
       \ min mins minute minutes hour hours day days week weeks
 
+syntax keyword lfTodo contained TODO FIXME
+
 highlight def link lfKeywords Keyword
 highlight def link lfActionOrigins Keyword
 highlight def link lfTimeUnits StorageClass
+highlight def link lfTodo Todo
 
 " Matches
-syntax match lfComment :\(#.*$\|//.*$\):
+syntax match lfComment :\(#.*$\|//.*$\): contains=lfTodo
 hi def link lfComment Comment
 syntax match lfTargetDelim :\({=\|=}\):
 hi def link lfTargetDelim Delimiter
@@ -34,7 +37,7 @@ hi def link lfTargetDelim Delimiter
 execute "syntax include @TARGET ". LFGetSyntaxFile()
 syntax region lfTargetLang keepend start=/{=/ contains=@TARGET end=/=}/
 
-syntax region lfBlockComment start=:/\*: end=:\*/:
+syntax region lfBlockComment start=:/\*: end=:\*/: contains=lfTodo
 hi def link lfBlockComment Comment
 
 syntax region lfString start=:": skip=:\\": end=:":
